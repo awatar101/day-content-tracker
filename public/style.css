@@ -1,0 +1,120 @@
+/* LIGHT MODE (oletus) */
+:root[data-theme="light"] {
+  --bg: #f4f6f8;
+  --text: #333;
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #ccc;
+  --button-bg: #0078ff;
+  --button-bg-hover: #005fcc;
+  --canvas-bg: #ffffff;
+  --prediction-color: #0078ff;
+}
+
+/* DARK MODE */
+:root[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #e0e0e0;
+  --card-bg: #2a2a2a;
+  --input-bg: #3a3a3a;
+  --input-border: #555;
+  --button-bg: #0090ff;
+  --button-bg-hover: #0070cc;
+  --canvas-bg: #2a2a2a;
+  --prediction-color: #4da3ff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  color: var(--text);
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--button-bg-hover);
+}
+
+#themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  background: var(--canvas-bg);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#keySelect {
+  display: block;
+  margin: 10px auto;
+  padding: 8px;
+  width: 300px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  color: var(--text);
+}
+
+#predictionResult {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--prediction-color);
+}

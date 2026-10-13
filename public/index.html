@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Day Context Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <button id="themeToggle">Vaihda teema</button>
+
+  <h1>Päivän konteksti</h1>
+
+  <form id="dayForm">
+    <label>Päivämäärä: <input name="date" type="date"></label><br>
+    <label>Viikonpäivä: <input name="weekday" type="text"></label><br>
+    <label>Sää: <input name="weather_type" type="text"></label><br>
+    <label>Lämpötila: <input name="temperature_c" type="number"></label><br>
+    <label>Uni (h): <input name="sleep_hours" type="number"></label><br>
+    <label>Työ (h): <input name="work_hours" type="number"></label><br>
+    <label>Häiriöt: <input name="distractions_count" type="number"></label><br>
+    <label>Fiilis (1–5): <input name="mood_level" type="number"></label><br>
+    <label>Tuottavuus (1–5): <input name="productivity_level" type="number"></label><br>
+    <button type="submit">Tallenna</button>
+  </form>
+
+  <hr>
+
+  <button id="drawChartBtn">Piirrä graafi</button>
+  <canvas id="chartCanvas" width="400" height="200"></canvas>
+
+  <hr>
+
+  <h2>Ennusta seuraava päivä</h2>
+  <select id="keySelect">
+    <option value="sleep_hours">Uni (h)</option>
+    <option value="work_hours">Työ (h)</option>
+    <option value="temperature_c">Lämpötila</option>
+    <option value="mood_level">Fiilis</option>
+    <option value="productivity_level">Tuottavuus</option>
+  </select>
+
+  <button id="predictBtn">Ennusta</button>
+  <p id="predictionResult"></p>
+
+  <!-- Ulkoiset scriptit -->
+  <script src="theme.js"></script>
+  <script src="chart-color.js"></script>
+  <script src="main.js"></script>
+  <script src="chart.js"></script>
+  <script src="predict.js"></script>
+</body>
+</html>
