@@ -1,5 +1,5 @@
 # Day Context Tracker
-Jarmo Pylkkä
+Jarmo Pylkkö
 
 Day Context Tracker on JavaScript/Node.js‑pohjainen datankeruuohjelma, joka tallentaa
 päiväkohtaista kontekstidataa (sää, uni, työ, fiilis, häiriöt, tuottavuus) ja tarjoaa
