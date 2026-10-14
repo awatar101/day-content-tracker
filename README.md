@@ -39,6 +39,18 @@ http://localhost:3000
 
 ---
 
+## Testaus
+
+Luo satunnainen data 30 päivälle
+Ajo projektin juuresta
+Hox!! ylikirjoittaa data.json filen, 
+ota backup siitä ennen suorittamista!
+
+```bash
+node get-fake-data.js
+```
+---
+
 ## Ngrok (valinnainen)
 
 Jos haluat jakaa sovelluksen ulkopuoliselle voit käyttää ngrokia.
